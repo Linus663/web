@@ -1,9 +1,10 @@
 'use client';
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 export default function Home() {
   const [displayedText, setDisplayedText] = useState('');
-  const fullText = "Matt's AI Lab";
+  const fullText = "Matt&apos;s AI Lab";
   
   // 輪播狀態
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -86,9 +87,11 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="bg-gray-800 p-6 rounded-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(255,127,80,0.2)] group">
             <div className="overflow-hidden rounded-lg mb-4">
-              <img 
+              <Image 
                 src="https://picsum.photos/400/300?random=1" 
                 alt="AI Development" 
+                width={400}
+                height={300}
                 className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105" 
               />
             </div>
@@ -98,9 +101,11 @@ export default function Home() {
 
           <div className="bg-gray-800 p-6 rounded-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(255,127,80,0.2)] group">
             <div className="overflow-hidden rounded-lg mb-4">
-              <img 
+              <Image 
                 src="https://picsum.photos/400/300?random=2" 
                 alt="Machine Learning" 
+                width={400}
+                height={300}
                 className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105" 
               />
             </div>
@@ -110,9 +115,11 @@ export default function Home() {
 
           <div className="bg-gray-800 p-6 rounded-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(255,127,80,0.2)] group">
             <div className="overflow-hidden rounded-lg mb-4">
-              <img 
+              <Image 
                 src="https://picsum.photos/400/300?random=3" 
                 alt="AI Consulting" 
+                width={400}
+                height={300}
                 className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105" 
               />
             </div>
@@ -133,11 +140,13 @@ export default function Home() {
               className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >
-              {portfolioItems.map((item, index) => (
+              {portfolioItems.map((item) => (
                 <div key={item.id} className="w-full flex-shrink-0 relative group">
-                  <img 
+                  <Image 
                     src={item.image} 
                     alt={item.title} 
+                    width={600}
+                    height={400}
                     className="w-full h-96 object-cover transition-transform duration-500 group-hover:scale-110 cursor-pointer"
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-all duration-300 rounded-lg flex items-center justify-center">
@@ -272,7 +281,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="space-y-4">
-              <h3 className="text-xl font-bold text-white">Matt's AI Lab</h3>
+              <h3 className="text-xl font-bold text-white">Matt&apos;s AI Lab</h3>
               <p className="text-gray-400">致力於推動人工智慧技術的創新與應用，為企業提供最優質的 AI 解決方案。</p>
             </div>
             <div>
@@ -315,7 +324,7 @@ export default function Home() {
             </div>
           </div>
           <div className="border-t border-gray-800 mt-12 pt-8 text-center">
-            <p className="text-gray-400">&copy; 2024 Matt's AI Lab. All rights reserved.</p>
+            <p className="text-gray-400">&copy; 2024 Matt&apos;s AI Lab. All rights reserved.</p>
           </div>
         </div>
       </footer>
