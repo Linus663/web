@@ -11,6 +11,7 @@ npm install
 
 2. 啟動開發伺服器
 ```
+
 npm run dev
 ```
 
@@ -35,3 +36,5 @@ http://localhost:3000
 ├── services/         # 服務層：串接第三方服務，例如：OpenAI、Firebase雲端資料庫、Stripe...等
 └── public/           # 靜態資源目錄（圖片、字體等）
 ```
+建置部屬到伺服器的版本
+npm run build

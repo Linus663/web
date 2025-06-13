@@ -270,12 +270,17 @@ const AILagPage = () => {
                                   }
                                 }}
                                 disabled={audioLoading[`${groupIndex}-${index}`]}
-                                className="ml-2 p-2 text-indigo-600 hover:text-indigo-800 focus:outline-none"
+                                className={`ml-2 p-2 text-indigo-600 hover:text-indigo-800 focus:outline-none ${
+                                  playingAudio === `${groupIndex}-${index}` ? 'text-indigo-800' : ''
+                                }`}
                               >
                                 {audioLoading[`${groupIndex}-${index}`] ? (
                                   <FontAwesomeIcon icon={faSpinner} spin />
                                 ) : (
-                                  <FontAwesomeIcon icon={faPlay} />
+                                  <FontAwesomeIcon 
+                                    icon={faPlay} 
+                                    className={playingAudio === `${groupIndex}-${index}` ? 'animate-pulse' : ''}
+                                  />
                                 )}
                               </button>
                             </div>

@@ -13,7 +13,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <span className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
-              Matt's AI Lab
+              Matt&apos;s AI Lab
             </span>
           </Link>
 

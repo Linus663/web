@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function About() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white">
@@ -5,7 +7,7 @@ export default function About() {
       <section className="container mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
-            關於 Matt's AI Lab
+            關於 Matt&apos;s AI Lab
           </h1>
           <p className="text-xl text-gray-300">
             我們致力於推動人工智慧技術的創新與應用，為企業提供最優質的 AI 解決方案
@@ -19,7 +21,7 @@ export default function About() {
           <div className="space-y-6">
             <h2 className="text-4xl font-bold">我們的故事</h2>
             <p className="text-gray-300 leading-relaxed">
-              Matt's AI Lab 成立於 2020 年，由一群熱衷於人工智慧技術的專業人士共同創立。
+              Matt&apos;s AI Lab 成立於 2020 年，由一群熱衷於人工智慧技術的專業人士共同創立。
               我們相信 AI 技術能夠為企業帶來革命性的改變，並致力於將最先進的 AI 技術轉化為實用的商業解決方案。
             </p>
             <p className="text-gray-300 leading-relaxed">
@@ -28,9 +30,11 @@ export default function About() {
             </p>
           </div>
           <div className="relative">
-            <img
+            <Image
               src="https://picsum.photos/600/400?random=6"
               alt="Company Story"
+              width={600}
+              height={400}
               className="rounded-lg shadow-2xl"
             />
             <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-coral-500 rounded-lg -z-10"></div>
@@ -44,9 +48,11 @@ export default function About() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="bg-gray-800 rounded-lg overflow-hidden group">
             <div className="relative">
-              <img
+              <Image
                 src="https://picsum.photos/400/500?random=7"
                 alt="Team Member 1"
+                width={400}
+                height={500}
                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -62,9 +68,11 @@ export default function About() {
 
           <div className="bg-gray-800 rounded-lg overflow-hidden group">
             <div className="relative">
-              <img
+              <Image
                 src="https://picsum.photos/400/500?random=8"
                 alt="Team Member 2"
+                width={400}
+                height={500}
                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -80,9 +88,11 @@ export default function About() {
 
           <div className="bg-gray-800 rounded-lg overflow-hidden group">
             <div className="relative">
-              <img
+              <Image
                 src="https://picsum.photos/400/500?random=9"
                 alt="Team Member 3"
+                width={400}
+                height={500}
                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
